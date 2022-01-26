@@ -13,11 +13,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/about', function () {
-    return view('about', [
-        "nama" => "Faiq Fauzi",
-        "email" => "faiqfauzi9@gmail.com",
-        "gambar" => "pln.jpeg"
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/', function () {
+    return view('home', [
+        "title" => "Home"
     ]);
 });
-    
+
+Route::get('/about', function () {
+    return view('about' , [
+        "title" => "About",
+        "nama" => "Faiq Fauzi",
+        "email" => "3103120082@gmail.com",
+        "gambar" => "11_Faiq Fauzi.jpg"
+    ]);
+});
+
+Route::get('/gallery', function () {
+    return view('gallery', [
+        "title" => "Gallery"
+    ]);
+});
