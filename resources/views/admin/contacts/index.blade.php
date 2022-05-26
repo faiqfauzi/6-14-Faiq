@@ -23,6 +23,7 @@
                                                 <th>Nama</th>
                                                 <th>Email</th>
                                                 <th>Pesan</th>
+                                                <th>Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -32,6 +33,9 @@
                                                 <td>{{ $contact->nama }}</td>
                                                 <td>{{ $contact->email }}</td>
                                                 <td>{{ $contact->pesan }}</td>
+                                                <td>
+                                                    <a href="{{ route('contacts.edit', $contact->id)}}">Edit</a>
+                                                </td>
                                             </tr>
                                            @endforeach
 

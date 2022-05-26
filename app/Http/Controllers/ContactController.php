@@ -64,7 +64,8 @@ class ContactController extends Controller
      */
     public function edit($id)
     {
-        //
+        $contact  = Contact::findOrFail($id);
+        return view('admin/contacts/edit', compact('contact'));
     }
 
     /**
